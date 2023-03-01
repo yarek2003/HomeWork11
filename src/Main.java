@@ -2,8 +2,15 @@ import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
-
-
+    printVersion(0,2020);
+    printLeapYear(2021);
+    int result = deliveryDays(73);
+    if (result == -1){
+        System.out.println("Доставки нет");
+    }
+    else {
+        System.out.println("Доставки займет " + result + " дней");
+    }
     }
     public static void printLeapYear(int year){
         if (year%4 == 0 && year%100 != 0 || year%400 == 0) {
@@ -14,7 +21,7 @@ public class Main {
         }
     }
 
-    public static void printVersion(byte os, int year){
+    public static void printVersion(int os, int year){
         int currentYear = LocalDate.now().getYear();
         if (currentYear == year && os ==1) {
             System.out.println("Установите обычную версию для Android");
@@ -28,6 +35,7 @@ public class Main {
 
     }
     public static int deliveryDays(int distance){
+        distance = 78;
         if (distance > 100) {
             return -1;
         }
