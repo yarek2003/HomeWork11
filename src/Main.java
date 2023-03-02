@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
     printVersion(0,2020);
     printLeapYear(2021);
-    int result = deliveryDays(73);
+    int result = deliveryDays(13);
     if (result == -1){
         System.out.println("Доставки нет");
     }
@@ -35,7 +35,6 @@ public class Main {
 
     }
     public static int deliveryDays(int distance){
-        distance = 78;
         if (distance > 100) {
             return -1;
         }
